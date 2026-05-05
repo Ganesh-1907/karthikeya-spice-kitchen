@@ -1,8 +1,41 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Users, Calendar, User, Sparkles, Clock, Phone } from "lucide-react";
 import reservationImg from "@/assets/reservation.png";
 
+const WHATSAPP_NUMBER = "447717217963";
+
 export function ReservationSection() {
+  const [form, setForm] = useState({
+    name: "",
+    mobile: "",
+    date: "",
+    time: "",
+    guests: "",
+    requests: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const message = [
+      `*New Table Reservation* 🍽️`,
+      ``,
+      `*Name:* ${form.name || "—"}`,
+      `*Mobile:* ${form.mobile || "—"}`,
+      `*Date:* ${form.date || "—"}`,
+      `*Time:* ${form.time || "—"}`,
+      `*Guests:* ${form.guests || "—"}`,
+      `*Special Requests:* ${form.requests || "None"}`,
+    ].join("\n");
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <section id="reservation" className="scroll-mt-24 py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
@@ -59,7 +92,7 @@ export function ReservationSection() {
               <p className="text-cream/50">Please fill in your details to secure your table.</p>
             </div>
 
-            <form className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8">
               {/* Row 1: Name & Mobile */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="relative group">
@@ -68,6 +101,9 @@ export function ReservationSection() {
                     <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/40 group-focus-within:text-gold transition-colors" size={18} />
                     <input
                       type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
                       placeholder="Enter your name"
                       className="w-full bg-white/5 border border-white/10 pl-12 pr-4 py-4 rounded-xl text-white focus:outline-none focus:border-gold/50 transition-all placeholder:text-cream/10"
                     />
@@ -79,6 +115,9 @@ export function ReservationSection() {
                     <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/40 group-focus-within:text-gold transition-colors" size={18} />
                     <input
                       type="tel"
+                      name="mobile"
+                      value={form.mobile}
+                      onChange={handleChange}
                       placeholder="Enter mobile number"
                       className="w-full bg-white/5 border border-white/10 pl-12 pr-4 py-4 rounded-xl text-white focus:outline-none focus:border-gold/50 transition-all placeholder:text-cream/10"
                     />
@@ -94,6 +133,9 @@ export function ReservationSection() {
                     <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/40 group-focus-within:text-gold transition-colors pointer-events-none" size={18} />
                     <input
                       type="date"
+                      name="date"
+                      value={form.date}
+                      onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 pl-12 pr-4 py-4 rounded-xl text-white focus:outline-none focus:border-gold/50 transition-all [color-scheme:dark]"
                     />
                   </div>
@@ -104,6 +146,9 @@ export function ReservationSection() {
                     <Clock className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/40 group-focus-within:text-gold transition-colors pointer-events-none" size={18} />
                     <input
                       type="time"
+                      name="time"
+                      value={form.time}
+                      onChange={handleChange}
                       className="w-full bg-white/5 border border-white/10 pl-12 pr-4 py-4 rounded-xl text-white focus:outline-none focus:border-gold/50 transition-all [color-scheme:dark]"
                     />
                   </div>
@@ -114,6 +159,9 @@ export function ReservationSection() {
                     <Users className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/40 group-focus-within:text-gold transition-colors" size={18} />
                     <input
                       type="text"
+                      name="guests"
+                      value={form.guests}
+                      onChange={handleChange}
                       placeholder="e.g. 4"
                       className="w-full bg-white/5 border border-white/10 pl-12 pr-4 py-4 rounded-xl text-white focus:outline-none focus:border-gold/50 transition-all placeholder:text-cream/10"
                     />
@@ -125,12 +173,15 @@ export function ReservationSection() {
               <div className="relative group">
                 <label className="text-xs uppercase tracking-widest text-gold/60 font-bold mb-2 block ml-1">Special Requests</label>
                 <textarea
+                  name="requests"
+                  value={form.requests}
+                  onChange={handleChange}
                   placeholder="Tell us about any allergies or special occasions..."
                   className="w-full bg-white/5 border border-white/10 px-4 py-4 rounded-xl text-white focus:outline-none focus:border-gold/50 transition-all placeholder:text-cream/10 h-32"
                 />
               </div>
 
-              <button className="w-full bg-gold text-primary-foreground font-bold uppercase tracking-widest py-5 hover:brightness-110 transition-all shadow-xl shadow-gold/10 rounded-2xl flex items-center justify-center gap-3 group active:scale-[0.98]">
+              <button type="submit" className="w-full bg-gold text-primary-foreground font-bold uppercase tracking-widest py-5 hover:brightness-110 transition-all shadow-xl shadow-gold/10 rounded-2xl flex items-center justify-center gap-3 group active:scale-[0.98]">
                 Confirm My Reservation
                 <Sparkles size={20} className="group-hover:rotate-12 transition-transform" />
               </button>
