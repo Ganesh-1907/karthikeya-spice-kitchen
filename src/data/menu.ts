@@ -1,4 +1,4 @@
-﻿export type MenuItem = {
+export type MenuItem = {
   id: string;
   name: string;
   price: number;
@@ -28,7 +28,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Classic dum-cooked chicken biryani layered with fragrant basmati rice.",
-        image: "https://source.unsplash.com/900x600/?chicken-dum-biryani,indian-food,curry&sig=301",
+        image: "/menu-images/nb1.png",
       },
       {
         id: "nb2",
@@ -37,7 +37,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 3,
         desc: "Aromatic biryani with spicy ghee roast chicken and bold southern masala.",
-        image: "https://source.unsplash.com/900x600/?chicken-ghee-roast-biryani,indian-food,curry&sig=302",
+        image: "/menu-images/nb2.png",
       },
       {
         id: "nb3",
@@ -46,7 +46,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Flavour-packed biryani topped with juicy spiced chicken fry pieces.",
-        image: "https://source.unsplash.com/900x600/?chicken-fry-piece-biryani,indian-food,curry&sig=303",
+        image: "/menu-images/nb3.png",
       },
       {
         id: "nb4",
@@ -55,7 +55,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 3,
         desc: "Spicy Chicken 65 paired with fragrant biryani rice for extra kick.",
-        image: "https://source.unsplash.com/900x600/?chicken-65-biryani,indian-food,curry&sig=304",
+        image: "/menu-images/nb4.png",
       },
       {
         id: "nb5",
@@ -64,7 +64,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Mughalai-style chicken biryani with rich masala and royal aroma.",
-        image: "https://source.unsplash.com/900x600/?chicken-mughlai-biryani,indian-food,curry&sig=305",
+        image: "/menu-images/nb5.png",
       },
       {
         id: "nb6",
@@ -73,7 +73,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Unique biryani combo featuring crispy chicken lollipop and masala rice.",
-        image: "https://source.unsplash.com/900x600/?chicken-lollipop-biryani,indian-food,curry&sig=306",
+        image: "/menu-images/nb6.png",
       },
       {
         id: "nb7",
@@ -82,7 +82,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 3,
         desc: "Tender mutton pieces slow-cooked with premium basmati and whole spices.",
-        image: "https://source.unsplash.com/900x600/?mutton-biryani,indian-food,curry&sig=307",
+        image: "/menu-images/nb7.png",
       },
       {
         id: "nb8",
@@ -91,7 +91,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 3,
         desc: "Robust mutton ghee roast folded into smoky, spice-forward biryani.",
-        image: "https://source.unsplash.com/900x600/?mutton-ghee-roast-biryani,indian-food,curry&sig=308",
+        image: "/menu-images/nb8.png",
       },
       {
         id: "nb9",
@@ -100,7 +100,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Minced mutton kheema biryani with rich masala and satisfying texture.",
-        image: "https://source.unsplash.com/900x600/?mutton-kheema-biryani,indian-food,curry&sig=309",
+        image: "/menu-images/nb9.png",
       },
       {
         id: "nb10",
@@ -109,7 +109,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Succulent prawns tossed into aromatic coastal-style biryani rice.",
-        image: "https://source.unsplash.com/900x600/?prawns-biryani,indian-food,curry&sig=310",
+        image: "/menu-images/nb10.png",
       },
       {
         id: "nb11",
@@ -118,7 +118,7 @@ export const MENU: MenuCategory[] = [
         veg: false,
         spice: 2,
         desc: "Special potlam-style biryani packed with layered spice and dum flavour.",
-        image: "https://source.unsplash.com/900x600/?potlam-biryani,indian-food,curry&sig=311",
+        image: "/menu-images/nb11.png",
       },
     ],
   },
@@ -134,7 +134,7 @@ export const MENU: MenuCategory[] = [
         veg: true,
         spice: 1,
         desc: "Colourful mixed vegetables layered with long-grain rice and gentle spices.",
-        image: "https://source.unsplash.com/900x600/?mixed-vegetable-biryani,indian-food,curry&sig=401",
+        image: "/menu-images/vb1.png",
       },
       {
         id: "vb2",
@@ -143,7 +143,7 @@ export const MENU: MenuCategory[] = [
         veg: true,
         spice: 2,
         desc: "Soft paneer cubes cooked with aromatic biryani masala and basmati rice.",
-        image: "https://source.unsplash.com/900x600/?paneer-biryani,indian-food,curry&sig=402",
+        image: "/menu-images/vb2.png",
       },
       {
         id: "vb3",
@@ -152,7 +152,7 @@ export const MENU: MenuCategory[] = [
         veg: true,
         spice: 3,
         desc: "Spicy Chettinadu-inspired veg biryani with roasted peppery notes.",
-        image: "https://source.unsplash.com/900x600/?chettinad-veg-biryani,indian-food,curry&sig=403",
+        image: "/menu-images/vb3.png",
       },
       {
         id: "vb4",
@@ -354,19 +354,154 @@ export const MENU: MenuCategory[] = [
       { id: "ns15", name: "Chilli Prawns", price: 8.99, veg: false, spice: 3, desc: "Spicy chilli prawns stir-fried with peppers.", image: "https://source.unsplash.com/900x600/?chilli-prawns,indian-food,curry&sig=515" },
     ],
   },
+  {
+    id: "veg-starters",
+    title: "Veg Starters",
+    subtitle: "Delicious vegetarian appetizers",
+    items: [
+      {
+        id: "vs1",
+        name: "Paneer Manchurian",
+        price: 6.49,
+        veg: true,
+        spice: 2,
+        desc: "Indo-Chinese style paneer tossed in tangy manchurian sauce.",
+        image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/11/paneer-manchurian-recipe.jpg",
+      },
+      {
+        id: "vs2",
+        name: "Chilli Paneer",
+        price: 5.99,
+        veg: true,
+        spice: 3,
+        desc: "Crispy paneer cubes with peppers and hot chilli sauce.",
+        image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/chilli-paneer-recipe.jpg",
+      },
+      {
+        id: "vs3",
+        name: "Veg Manchurian",
+        price: 6.49,
+        veg: true,
+        spice: 2,
+        desc: "Crispy vegetable balls in a spicy, sweet and tangy manchurian sauce.",
+        image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/veg-manchurian.jpg",
+      },
+      {
+        id: "vs4",
+        name: "Gobi 65",
+        price: 6.49,
+        veg: true,
+        spice: 3,
+        desc: "Deep-fried spicy cauliflower florets with curry leaves.",
+        image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/08/gobi-65-recipe.jpg",
+      },
+      {
+        id: "vs5",
+        name: "Crispy Corn",
+        price: 6.49,
+        veg: true,
+        spice: 2,
+        desc: "Golden fried sweet corn kernels tossed with spices and onions.",
+        image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/01/crispy-corn-recipe.jpg",
+      },
+      {
+        id: "vs6",
+        name: "Chilli Garlic Mushroom",
+        price: 6.99,
+        veg: true,
+        spice: 3,
+        desc: "Mushrooms sautéed with lots of garlic and red chilli paste.",
+        image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/06/chilli-mushroom-recipe.jpg",
+      },
+    ],
+  },
+  {
+    id: "street-food",
+    title: "Street Food",
+    subtitle: "Authentic Indian street delicacies",
+    items: [
+      { id: "sf1", name: "Chitti punugulu", price: 3.99, veg: true, spice: 1, desc: "Bite-sized crispy fritters made from fermented rice and lentil batter.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/10/punugulu-recipe.jpg" },
+      { id: "sf2", name: "Makka vadalu", price: 4.49, veg: true, spice: 2, desc: "Crispy corn-based vadas seasoned with southern spices.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/01/corn-vada-recipe.jpg" },
+      { id: "sf3", name: "Muntha masala", price: 3.99, veg: true, spice: 2, desc: "Classic puffed rice mixture with spices, onions and peanuts.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/muntha-masala.jpg" },
+      { id: "sf4", name: "Baji mixture", price: 4.99, veg: true, spice: 2, desc: "Assorted fried snacks mixed with spicy powders and herbs.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/bajji-recipe.jpg" },
+      { id: "sf5", name: "Cut Mirchi", price: 4.49, veg: true, spice: 3, desc: "Double-fried chilli bajji cut into pieces and topped with onions.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/cut-mirchi-bajji.jpg" },
+      { id: "sf6", name: "Mirchi bajji", price: 4.99, veg: true, spice: 3, desc: "Spiced green chillies dipped in batter and deep-fried.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2014/11/mirchi-bajji-recipe.jpg" },
+      { id: "sf7", name: "Onion pakora", price: 3.99, veg: true, spice: 2, desc: "Crispy sliced onion fritters with gram flour and spices.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/01/onion-pakoda.jpg" },
+      { id: "sf8", name: "Tomato Baji", price: 4.99, veg: true, spice: 2, desc: "Juicy tomato slices dipped in batter and fried to perfection.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2012/10/tomato-bajji-recipe.jpg" },
+      { id: "sf9", name: "Gunthapunugulu", price: 4.49, veg: true, spice: 1, desc: "Soft and fluffy rice-lentil dumplings cooked in a special pan.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/05/gunta-punugulu-recipe.jpg" },
+      { id: "sf10", name: "Egg bajji", price: 4.99, veg: false, spice: 2, desc: "Boiled egg halves dipped in spicy batter and deep-fried.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/egg-bajji-recipe.jpg" },
+      { id: "sf11", name: "Allu bajji", price: 3.99, veg: true, spice: 1, desc: "Thinly sliced potatoes dipped in gram flour batter and fried.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2012/10/potato-bajji-recipe.jpg" },
+    ],
+  },
+  {
+    id: "breads",
+    title: "Breads",
+    subtitle: "Freshly baked Indian breads",
+    items: [
+      { id: "br1", name: "Chapathi", price: 1.49, veg: true, desc: "Whole wheat flatbread cooked on a griddle.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2020/12/soft-chapati-recipe.jpg" },
+      { id: "br2", name: "Parota", price: 2.49, veg: true, desc: "Layered, flaky flatbread made from refined flour.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/paratha-recipe.jpg" },
+      { id: "br3", name: "Tandoori roti", price: 2.99, veg: true, desc: "Clay oven-baked whole wheat flatbread.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/09/tandoori-roti-recipe.jpg" },
+      { id: "br4", name: "Plain naan", price: 1.99, veg: true, desc: "Soft tandoor-baked leavened flatbread.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/naan-recipe.jpg" },
+      { id: "br5", name: "Butter naan", price: 2.49, veg: true, desc: "Naan bread brushed with fresh melted butter.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/butter-naan.jpg" },
+      { id: "br6", name: "Garlic naan", price: 2.49, veg: true, desc: "Naan bread topped with roasted garlic and herbs.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/garlic-naan.jpg" },
+      { id: "br7", name: "Chilli garlic naan", price: 2.99, veg: true, desc: "Naan bread with garlic and spicy green chillies.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/chilli-garlic-naan.jpg" },
+    ],
+  },
+  {
+    id: "tandoori",
+    title: "Tandoori",
+    subtitle: "Sizzling clay oven specialities",
+    items: [
+      { id: "td1", name: "Chicken tandoori full", price: 12.99, veg: false, spice: 2, desc: "Whole chicken marinated in yogurt and spices, roasted in tandoor.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/tandoori-chicken.jpg" },
+      { id: "td2", name: "Chicken tandoori half", price: 8.99, veg: false, spice: 2, desc: "Half chicken roasted to perfection with traditional tandoori masala.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/tandoori-chicken-half.jpg" },
+      { id: "td3", name: "Chicken tandoori quarter", price: 4.99, veg: false, spice: 2, desc: "Quarter portion of our signature clay oven roasted chicken.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/tandoori-chicken-quarter.jpg" },
+      { id: "td4", name: "Chicken tikka", price: 5.99, veg: false, spice: 3, desc: "Spiced boneless chicken pieces grilled to smoky perfection.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/chicken-tikka-recipe.jpg" },
+    ],
+  },
+  {
+    id: "tiffins",
+    title: "Tiffins",
+    subtitle: "South Indian breakfast & lunch specials",
+    items: [
+      { id: "tf1", name: "Plain dosa", price: 3.99, veg: true, desc: "Thin crispy rice-lentil crepe served with chutneys and sambar.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/11/dosa-recipe.jpg" },
+      { id: "tf2", name: "Egg dosa", price: 4.99, veg: false, desc: "Dosa spread with egg and spices for extra richness.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/egg-dosa.jpg" },
+      { id: "tf3", name: "Double egg dosa", price: 5.49, veg: false, desc: "Dosa loaded with double egg and pepper seasoning.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/egg-dosa-double.jpg" },
+      { id: "tf4", name: "Masala dosa", price: 4.99, veg: true, desc: "Dosa stuffed with spiced potato masala.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/11/masala-dosa-recipe.jpg" },
+      { id: "tf5", name: "Onion dosa", price: 4.99, veg: true, desc: "Crispy dosa topped with finely chopped onions and chillies.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/11/onion-dosa-recipe.jpg" },
+      { id: "tf6", name: "Plain utapam", price: 4.49, veg: true, desc: "Thick savory pancake made from fermented rice-lentil batter.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/uttapam-recipe.jpg" },
+      { id: "tf7", name: "Mix utapam", price: 4.99, veg: true, desc: "Utapam topped with carrots, onions, tomatoes and green chillies.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/onion-uttapam.jpg" },
+      { id: "tf8", name: "Idly", price: 3.99, veg: true, desc: "Soft steamed rice-lentil cakes served with sambar and chutney.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/idli-recipe.jpg" },
+      { id: "tf9", name: "Sambar idly", price: 4.99, veg: true, desc: "Idly soaked in a bowl of piping hot spicy sambar.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/sambar-idli.jpg" },
+      { id: "tf10", name: "Vada", price: 4.49, veg: true, desc: "Crispy deep-fried lentil donuts with peppery seasoning.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/medu-vada-recipe.jpg" },
+      { id: "tf11", name: "Sambar Vada", price: 5.49, veg: true, desc: "Crunchy vada soaked in a bowl of flavorful sambar.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/sambar-vada.jpg" },
+      { id: "tf12", name: "Poori", price: 4.99, veg: true, desc: "Deep-fried puffed whole wheat bread served with potato bhaji.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/10/poori-recipe.jpg" },
+      { id: "tf13", name: "Mysore Bonda", price: 4.99, veg: true, desc: "Spongy and round deep-fried flour dumplings.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/10/mysore-bonda.jpg" },
+      { id: "tf14", name: "Minapa bonda", price: 4.99, veg: true, desc: "Deep-fried lentil batter balls with ginger and green chilli.", image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/10/urad-dal-bonda.jpg" },
+    ],
+  },
 ];
 
 export const RESTAURANT = {
   name: "Karthikeya Spice Kitchen",
+  manager: "Lucky",
   tagline: "Every Bite, Full of Flavour",
   cuisine: "South Indian Food - Indian Street Food",
   address: "8 Gordon Street, Luton LU1 2QP, United Kingdom",
   addressLines: ["8 Gordon Street", "Luton LU1 2QP", "United Kingdom"],
-  phone: "01582 750184",
-  phoneLink: "tel:01582750184",
+  phone: "07717217963",
+  phoneLink: "tel:07717217963",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Karthikeya%20Spice%20Kitchen%208%20Gordon%20Street%20Luton%20LU1%202QP",
-  hours: "Open â€¢ Closes 11 PM",
+  hours: "Open • Closes 11 PM",
+  openingHours: [
+    { day: "Monday", time: "12:00 PM - 10:00 PM" },
+    { day: "Tuesday", time: "12:00 PM - 10:00 PM" },
+    { day: "Wednesday", time: "12:00 PM - 10:00 PM" },
+    { day: "Thursday", time: "12:00 PM - 11:00 PM" },
+    { day: "Friday", time: "12:00 PM - 11:30 PM" },
+    { day: "Saturday", time: "12:00 PM - 11:30 PM" },
+    { day: "Sunday", time: "1:00 PM - 10:00 PM" },
+  ],
 };
 
 

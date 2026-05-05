@@ -21,3 +21,4 @@ export function Logo({ size = 36 }: { size?: number }) {
     </div>
   );
 }
+

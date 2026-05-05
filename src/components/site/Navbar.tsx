@@ -58,6 +58,8 @@ export function Navbar() {
           {open ? <X size={26} /> : <MenuIcon size={26} />}
         </button>
       </div>
+
+
       {open && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}

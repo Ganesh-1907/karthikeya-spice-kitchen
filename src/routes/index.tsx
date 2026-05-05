@@ -3,6 +3,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { AboutSection } from "@/components/site/AboutSection";
 import { MenuSection } from "@/components/site/MenuSection";
+import { ReservationSection } from "@/components/site/ReservationSection";
 import { GallerySection } from "@/components/site/GallerySection";
 import { ReviewsSection } from "@/components/site/ReviewsSection";
 import { LocationSection } from "@/components/site/LocationSection";
@@ -37,8 +38,9 @@ function Index() {
         <Navbar />
         <main className="pt-16 sm:pt-20">
           <Hero />
-          <MenuSection />
           <AboutSection />
+          <MenuSection />
+          <ReservationSection />
           <GallerySection />
           <ReviewsSection />
           <LocationSection />
@@ -50,3 +52,4 @@ function Index() {
     </PlateProvider>
   );
 }
+

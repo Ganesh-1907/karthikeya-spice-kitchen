@@ -22,11 +22,14 @@ export function GallerySection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-xs uppercase tracking-[0.4em] text-gold mb-4">Gallery</p>
-          <h2 className="font-serif text-4xl sm:text-6xl text-gradient-gold mb-4">
-            Food & Signature Flavours
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <span className="h-0.5 w-10 bg-gold" />
+            <span className="text-gold font-serif italic text-lg tracking-widest">Gallery</span>
+            <span className="h-0.5 w-10 bg-gold" />
+          </div>
+          <h2 className="font-serif text-4xl sm:text-6xl text-white font-bold leading-tight">
+            Signature Flavours
           </h2>
-          <div className="gold-divider w-40 mx-auto" />
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 auto-rows-[180px] sm:auto-rows-[210px]">
