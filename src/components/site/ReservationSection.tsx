@@ -37,7 +37,8 @@ export function ReservationSection() {
   };
 
   return (
-    <section id="reservation" className="scroll-mt-24 py-24 bg-background">
+    <section id="reservation" className="scroll-mt-24 relative py-24 bg-background">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered Heading */}
         <div className="text-center mb-20">
@@ -49,7 +50,7 @@ export function ReservationSection() {
           <h2 className="font-serif text-5xl sm:text-7xl font-bold text-white leading-tight">
             Book A Table
           </h2>
-          <p className="text-cream/40 mt-4 max-w-2xl mx-auto italic">
+          <p className="text-gold mt-4 max-w-2xl mx-auto font-serif italic">
             "Experience authentic flavours in an atmosphere of warmth and elegance. Secure your journey through the spices of India today."
           </p>
         </div>

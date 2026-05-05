@@ -36,7 +36,7 @@ function Index() {
     <PlateProvider>
       <div className="bg-background text-foreground min-h-screen">
         <Navbar />
-        <main className="pt-16 sm:pt-20">
+        <main>
           <Hero />
           <AboutSection />
           <MenuSection />

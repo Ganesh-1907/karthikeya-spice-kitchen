@@ -31,7 +31,8 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="scroll-mt-24 py-20 sm:py-24 px-5 sm:px-6 bg-background text-cream">
+    <section id="about" className="scroll-mt-24 relative py-20 sm:py-24 px-5 sm:px-6 bg-background text-cream">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Symmetric Centered Header */}
         <motion.div
@@ -112,11 +113,11 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-start">
+            {/* <div className="flex justify-center lg:justify-start">
               <button className="bg-gold text-primary-foreground px-10 py-4 font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-all rounded-xl shadow-gold">
                 Read More
               </button>
-            </div>
+            </div> */}
           </motion.div>
         </div>
 

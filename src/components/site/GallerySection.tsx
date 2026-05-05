@@ -14,7 +14,8 @@ const items = [
 
 export function GallerySection() {
   return (
-    <section id="gallery" className="scroll-mt-24 py-20 sm:py-24 px-5 sm:px-6">
+    <section id="gallery" className="scroll-mt-24 relative py-20 sm:py-24 px-5 sm:px-6">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

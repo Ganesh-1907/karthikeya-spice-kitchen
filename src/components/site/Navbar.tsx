@@ -17,7 +17,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const f = () => setScrolled(window.scrollY > 30);
+    const f = () => setScrolled(window.scrollY > window.innerHeight * 0.75);
     f();
     window.addEventListener("scroll", f);
     return () => window.removeEventListener("scroll", f);
@@ -28,10 +28,10 @@ export function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 inset-x-0 z-40 transition-all ${
+      className={`fixed top-0 inset-x-0 z-40 duration-500 transition-[background-color,backdrop-filter,border-color,box-shadow] ${
         scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-gold/20"
-          : "bg-background/35 backdrop-blur-lg"
+          ? "bg-background/90 backdrop-blur-xl border-b border-gold/20 shadow-md"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
@@ -43,7 +43,7 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-xs lg:text-sm uppercase tracking-[0.2em] text-cream/80 hover:text-gold transition-colors relative group"
+              className="text-xs lg:text-sm uppercase tracking-[0.2em] text-cream/80 hover:text-gold transition-colors relative group drop-shadow-md"
             >
               {l.label}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all group-hover:w-full" />

@@ -8,8 +8,9 @@ export function LocationSection() {
   return (
     <section
       id="location"
-      className="scroll-mt-24 py-20 px-5 sm:px-6 bg-[#0D0D0D] text-white"
+      className="scroll-mt-24 relative py-20 px-5 sm:px-6 bg-background text-white"
     >
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">

@@ -74,7 +74,7 @@ export function ReviewsSection() {
           <h2 className="font-serif text-5xl sm:text-7xl text-white font-bold leading-tight">
             Guest Stories
           </h2>
-          <p className="text-cream/40 mt-6 max-w-2xl mx-auto">
+          <p className="text-gold mt-6 max-w-2xl mx-auto font-serif italic">
             "We take great pride in the happiness of our guests. Here is what some of our regular diners have to say about their experience with us."
           </p>
         </motion.div>

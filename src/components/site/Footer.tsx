@@ -104,11 +104,11 @@ export function Footer() {
           <p className="text-xs text-cream/30 uppercase tracking-widest">
             © {currentYear} {RESTAURANT.name}. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-8 text-[10px] text-cream/20 uppercase tracking-[0.2em]">
+          {/* <div className="flex items-center gap-8 text-[10px] text-cream/20 uppercase tracking-[0.2em]">
             <a href="#" className="hover:text-gold transition-all">Privacy Policy</a>
             <a href="#" className="hover:text-gold transition-all">Terms of Service</a>
             <a href="#" className="hover:text-gold transition-all">Cookie Policy</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, UtensilsCrossed, Clock } from "lucide-react";
-import heroBg from "@/assets/hero-spices.jpg";
+import heroBg from "@/assets/gallery-biryani.jpg";
 import { RESTAURANT } from "@/data/menu";
 import { openMaps } from "@/lib/maps";
 import { useLondonTimeStatus } from "@/lib/hours";
@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="scroll-mt-24 relative min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-hero"
+      className="scroll-mt-24 relative min-h-screen flex items-center justify-center overflow-hidden bg-hero"
     >
       <div className="absolute inset-0">
         <img
@@ -20,9 +20,11 @@ export function Hero() {
           alt="Indian spices and signature dishes"
           width={1920}
           height={1280}
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-85"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_50%,_rgba(0,0,0,0.8)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.5)_0%,_rgba(0,0,0,0)_60%)]" />
       </div>
 
       <div
@@ -62,18 +64,18 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
-          className="font-serif text-5xl sm:text-7xl md:text-8xl text-gradient-gold leading-none mb-6"
+          className="font-serif text-5xl sm:text-7xl md:text-8xl text-gradient-gold leading-none mb-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
         >
           Karthikeya
           <br />
-          <span className="text-cream">Spice Kitchen</span>
+          <span className="text-cream drop-shadow-[0_5px_15px_rgba(0,0,0,0.6)]">Spice Kitchen</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-cream/80 text-base sm:text-lg max-w-2xl mx-auto mb-2"
+          className="text-cream/80 text-base sm:text-lg max-w-2xl mx-auto mb-2 drop-shadow-md"
         >
           {RESTAURANT.cuisine}
         </motion.p>
@@ -128,9 +130,20 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-gold/60 text-xs uppercase tracking-[0.3em] animate-pulse">
-        Scroll
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+      >
+        <div className="w-6 h-9 rounded-full border-2 border-gold/50 flex items-start justify-center pt-1.5">
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-1 h-2 rounded-full bg-gold/70"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
