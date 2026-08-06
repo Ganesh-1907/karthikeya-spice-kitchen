@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Users, Calendar, User, Sparkles, Clock, Phone } from "lucide-react";
 import reservationImg from "@/assets/reservation.png";
 
-const WHATSAPP_NUMBER = "447717217963";
+const WHATSAPP_NUMBER = "441582750494";
 
 export function ReservationSection() {
   const [form, setForm] = useState({

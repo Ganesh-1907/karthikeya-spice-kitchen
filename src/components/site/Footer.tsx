@@ -78,23 +78,13 @@ export function Footer() {
           {/* Newsletter / Hours Column */}
           <div className="space-y-6">
             <h4 className="text-white font-serif text-xl font-bold">Opening Hours</h4>
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm">
-                <span className="text-cream/40">Mon - Wed:</span>
-                <span className="text-gold">12:00 PM - 10:00 PM</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-cream/40">Thu:</span>
-                <span className="text-gold">12:00 PM - 11:00 PM</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-cream/40">Fri - Sat:</span>
-                <span className="text-gold">12:00 PM - 11:30 PM</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-cream/40">Sun:</span>
-                <span className="text-gold">1:00 PM - 10:00 PM</span>
-              </div>
+            <div className="space-y-2.5">
+              {RESTAURANT.openingHours.map((oh) => (
+                <div key={oh.day} className="flex justify-between text-sm">
+                  <span className="text-cream/40">{oh.day}:</span>
+                  <span className="text-gold">{oh.time}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

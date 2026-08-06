@@ -1,24 +1,51 @@
 import { useEffect, useState } from "react";
 
-const OPEN_MINUTES = 11 * 60;
-const CLOSE_MINUTES = 23 * 60;
-
-function getLondonMinutes(now = new Date()) {
-  const londonTime = new Intl.DateTimeFormat("en-GB", {
+function getLondonTimeDetails(now = new Date()) {
+  const formatter = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Europe/London",
-    hour: "2-digit",
-    minute: "2-digit",
+    weekday: "long",
+    hour: "numeric",
+    minute: "numeric",
     hour12: false,
-  }).format(now);
+  });
 
-  const [hour, minute] = londonTime.split(":").map(Number);
-  return hour * 60 + minute;
+  const parts = formatter.formatToParts(now);
+  let weekday = "";
+  let hour = 0;
+  let minute = 0;
+
+  for (const part of parts) {
+    if (part.type === "weekday") weekday = part.value;
+    if (part.type === "hour") hour = parseInt(part.value, 10);
+    if (part.type === "minute") minute = parseInt(part.value, 10);
+  }
+
+  return { weekday, hour, minute };
 }
 
 export function getLondonTimeStatus(now = new Date()) {
-  const currentMinutes = getLondonMinutes(now);
-  const isOpen = currentMinutes >= OPEN_MINUTES && currentMinutes < CLOSE_MINUTES;
-  return isOpen ? "Open � Closes 11 PM" : "Closed � Opens 11 AM";
+  const { weekday, hour, minute } = getLondonTimeDetails(now);
+  const currentMinutes = hour * 60 + minute;
+
+  const isWeekend = weekday === "Saturday" || weekday === "Sunday";
+  const openHour = isWeekend ? 8 : 12;
+  const closeHour = 23;
+
+  const openMinutes = openHour * 60;
+  const closeMinutes = closeHour * 60;
+
+  const isOpen = currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+
+  if (isOpen) {
+    return "Open • Closes 11 PM";
+  } else {
+    if (currentMinutes < openMinutes) {
+      return `Closed • Opens ${openHour === 12 ? "12 PM" : "8 AM"}`;
+    } else {
+      const isTomorrowWeekend = weekday === "Friday" || weekday === "Saturday";
+      return `Closed • Opens ${isTomorrowWeekend ? "8 AM" : "12 PM"}`;
+    }
+  }
 }
 
 export function useLondonTimeStatus() {
